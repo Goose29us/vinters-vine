@@ -1,6 +1,8 @@
 {
   "name": "vintersVine",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular",
   "id": "3c66448a"
 }

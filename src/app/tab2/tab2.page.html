@@ -6,4 +6,18 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content></ion-content>
+<ion-content>
+  <ion-list class="login-div">
+    <ion-item>
+      <ion-label class="login-lbl" color="primary" stacked>Username:</ion-label>
+      <ion-input class="login-text" type="email" placeholder="username"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label class="login-lbl" color="primary" stacked>Password:</ion-label>
+      <ion-input class="login-text" type="password" placeholder="password"></ion-input>
+    </ion-item>
+    <button mat-button class="cork-button" (click)="click()">
+      Start Batch
+    </button>
+  </ion-list>
+</ion-content>
