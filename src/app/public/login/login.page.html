@@ -4,8 +4,27 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content padding>
-  <ion-button (click)="login()" expand="block">Login</ion-button>
-  <ion-button expand="block" color="secondary" href="/register" routerDirection="forward">Register</ion-button>
-
+<ion-content style="background: transparent">
+  <ion-list class="login-div" style="background-color:maroon; text-align: -webkit-center; height: 100%; width: 100%;">
+    <div>
+    <ion-item class="logon-item"> 
+      <ion-label class="login-lbl" color="primary">Username:</ion-label>
+      <ion-input class="login-text" type="email" placeholder="username"></ion-input>
+    </ion-item>
+    <ion-item style="width: 300px; background: bisque; border-radius: 12px;; margin: 5px">
+      <ion-label class="login-lbl" color="primary">Password:</ion-label>
+      <ion-input class="login-text" type="password" placeholder="password"></ion-input>
+    </ion-item>
+    <table>
+      <tr style="padding: 5px">
+        <td>
+            <button ion-button (click)="login()" class="cork-button">Login</button>
+        </td>
+        <td>
+            <button ion-button outline href="/register" routerDirection="forward" class="cork-button">Register</button>
+        </td>
+      </tr>
+    </table>
+  </div>
+  </ion-list>
 </ion-content>

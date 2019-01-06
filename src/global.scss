@@ -11,3 +11,19 @@
 @import '~@ionic/angular/css/flex-utils.css';
 
 @import '~@angular/material/prebuilt-themes/indigo-pink.css'; 
+
+.cork-button {
+    background: url(./assets/button/cork-button.jpg);
+    border-radius: 12px;
+    border-color: black;
+    width: 120px;
+    height: 35px;
+    font-size: 12pt;
+    font-weight: 600;
+    font-family: serif;
+    margin: 5px;
+}
+
+item-native {
+    background: none !important;
+}
