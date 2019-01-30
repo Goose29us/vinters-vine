@@ -13,6 +13,7 @@ import { AppComponent } from './app.component';
 import { MaterialModule } from './material.module';
 import { IonicStorageModule } from '@ionic/storage';
 import 'rxjs/operators';
+
 @NgModule({
   declarations: [AppComponent],
   entryComponents: [],
@@ -20,7 +21,7 @@ import 'rxjs/operators';
     IonicModule.forRoot(),
     IonicStorageModule.forRoot(),
     AppRoutingModule,
-    MaterialModule
+    MaterialModule,
   ],
   providers: [
     StatusBar,
