@@ -1,7 +1,9 @@
 import { Injectable } from '@angular/core';
-import { BehaviorSubject } from 'rxjs';
+import { BehaviorSubject, Observable } from 'rxjs';
 import { Platform } from '@ionic/angular';
 import { Storage } from '@ionic/storage';
+import { UserService } from './user.service';
+import { userInfo } from 'os';
 
 const TOKEN_KEY = 'auth-token';
 
@@ -11,14 +13,22 @@ const TOKEN_KEY = 'auth-token';
 export class AuthenticationService {
 
   authenticationState = new BehaviorSubject(false);
+  user: Observable<any>;
 
-  constructor(private storage: Storage, private plt: Platform) {
+  constructor(private storage: Storage
+    , private plt: Platform
+    , private userSvc: UserService) {
     this.plt.ready().then(() => {
       this.checkToken();
     });
    }
 
-  login() {
+  login(usrName: string, usrPwd: String)  {
+      // Call user service function which returns an Observable
+      this.user = this.userSvc.getUserbyUsrName(usrName);
+
+    console.log(this.user);
+
     return this.storage.set(TOKEN_KEY, 'Bearer 123456').then(res => {
       this.authenticationState.next(true);
     });
