@@ -3,8 +3,8 @@ import { BehaviorSubject, Observable } from 'rxjs';
 import { Platform } from '@ionic/angular';
 import { Storage } from '@ionic/storage';
 import { UserService } from './user.service';
-import { userInfo } from 'os';
-
+import { MatTableDataSource } from '@angular/material';
+import { User } from '../classes/user';
 const TOKEN_KEY = 'auth-token';
 
 @Injectable({
@@ -13,7 +13,7 @@ const TOKEN_KEY = 'auth-token';
 export class AuthenticationService {
 
   authenticationState = new BehaviorSubject(false);
-  user: Observable<any>;
+  user: User;
 
   constructor(private storage: Storage
     , private plt: Platform
