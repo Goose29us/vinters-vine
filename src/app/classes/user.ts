@@ -6,5 +6,4 @@ export class User {
     status: string;
     usrName: string;
     usrPwd: string;
-
 }
